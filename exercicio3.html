@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vielport"
+        content="windh= device-width, user-scable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+</head>
+<body>
+
+<h2>Verificador de Números Pares e Ímpares</h2>
+
+<p>Digite um número inteiro positivo:</p>
+
+<input id="num" type="number" min="1" oninput="checkEvenOdd()">
+
+<script>
+function checkEvenOdd() {
+    let num = document.getElementById("num").value;
+    num = parseInt(num);
+
+    if(Number.isInteger(num) && num > 0) {
+        if(num % 2 === 0) {
+            alert("O número " + num + " é par.");
+        } else {
+            alert("O número " + num + " é ímpar.");
+        }
+    } else {
+        alert("Por favor, digite um número inteiro positivo.");
+    }
+}
+</script>
+
+</body>
+</html>
