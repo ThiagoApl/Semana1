@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vielport"
+        content="windh= device-width, user-scable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+</head>
+<body>
+
+<p>Clique no botão abaixo para inserir um dado:</p>
+
+<button onclick="myFunction()">Clique aqui</button>
+
+<p id="demo"></p>
+<p>“Obrigado por visitar esta página”.</p>
+<script>
+function myFunction() {
+  var data = prompt("Por favor, insira um dado");
+  if (data != null) {
+    var numberData = Number(data);
+    if (!isNaN(numberData)) {
+      data = numberData;
+    }
+    if (confirm("Você deseja verificar o tipo do dado informado?")) {
+      document.getElementById("demo").innerHTML = "O tipo do dado é: " + typeof data;
+    } else {
+      document.getElementById("demo").innerHTML = "Obrigado por visitar esta página";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
 
