@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vielport"
+        content="windh= device-width, user-scable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+</head>
+<body>
+
+<h2>Calculadora de Fatorial</h2>
+
+<p>Digite um número inteiro positivo:</p>
+
+<input id="num" type="number" min="1" oninput="calculateFactorial()">
+
+<script>
+function factorial(n) {
+    let result = 1;
+    for(let i = 2; i <= n; i++)
+        result *= i;
+    return result;
+}
+
+function calculateFactorial() {
+    let num = document.getElementById("num").value;
+    num = parseInt(num);
+
+    if(Number.isInteger(num) && num > 0) {
+        let fact = factorial(num);
+        alert("O fatorial de " + num + " é " + fact + ".");
+    } else {
+        alert("Por favor, digite um número inteiro positivo.");
+    }
+}
+</script>
+
+</body>
+</html>
